@@ -13,21 +13,38 @@ public class MyPanel extends JPanel {
     }
     private int x = 100;
     private int y = 100;
-    private int width = 200;
-    private int height = 200;
-    private int delta = 10;
+    private int width = 50;
+    private int height = 100;
+    private int step = 30;
+    private int delta = 5;
 
     private ArrayList <Rectangle> outlist = new ArrayList<Rectangle>();
 
     public void setSymbols(String parm){
-        segment(1);
-        segment(2);
-        segment(3);
-        segment(4);
-        segment(5);
-        segment(6);
-        segment(7);
-
+        String[] arr = parm.replace(",","").split(" ");
+        for (String cifra:arr){
+            switch (cifra){
+                case "1":
+                    segment(2);
+                    segment(4);
+                    break;
+                case "2":
+                    segment(1);
+                    segment(2);
+                    segment(3);
+                    segment(5);
+                    segment(6);
+                    break;
+                case "3":
+                    segment(1);
+                    segment(2);
+                    segment(3);
+                    segment(4);
+                    segment(5);
+                    break;
+            }
+            x = x + step + width;
+        }
     }
     private void segment (int number){
         switch (number){
