@@ -48,15 +48,15 @@ public class MyPanel extends JPanel {
     }
     private void segment (int number){
         switch (number){
-            case 1:outlist.add(new Rectangle(x+delta,y,width-delta,y));
+            case 1:outlist.add(new Rectangle(x+delta,y,x+width-delta,y));
                 break;
-            case 2:outlist.add(new Rectangle(width,y+delta,width,y+(height/2)-delta));
+            case 2:outlist.add(new Rectangle(x+width,y+delta,x+width,y+(height/2)-delta));
                 break;
-            case 3:outlist.add(new Rectangle(x+delta,y+height/2,width-delta,y+height/2));
+            case 3:outlist.add(new Rectangle(x+delta,y+height/2,x+width-delta,y+height/2));
                 break;
-            case 4:outlist.add(new Rectangle(width,y+(height/2)+delta,width,y+height - delta));
+            case 4:outlist.add(new Rectangle(x+width,y+(height/2)+delta,x+width,y+height - delta));
                 break;
-            case 5:outlist.add(new Rectangle(x+delta,y+height,width-delta,y+height));
+            case 5:outlist.add(new Rectangle(x+delta,y+height,x+width-delta,y+height));
                 break;
             case 6:outlist.add(new Rectangle(x,y+(height/2)+delta,x,y+height-delta));
                 break;
